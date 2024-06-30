@@ -33,36 +33,45 @@ import HeaderNavigation from "../components/Nav.astro";
 					<stop offset="1" stop-opacity="0.2"></stop>
 				</linearGradient>
 			</defs>
+			
 		</svg>
 		<HeaderNavigation />
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h1> <span class="text-gradient">大学生学习交流</span></h1>
+		<style>
+			.text-gradient {
+				background: linear-gradient(to right, red, orange, yellow, green, rgb(244, 247, 248), rgb(218, 215, 219), violet);
+				-webkit-background-clip: text;
+				background-clip: text;
+				color: transparent;
+				display: inline-block;
+			}
+		</style>
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br
+			交流新闻学专业课的内容、大学生活安排以及考研事宜.<br
 			/>
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
-			above.
+			<strong>有问必答:</strong> 欢迎收藏并关注我们的网站，我们将不定期的更新，有想要咨询的内容请发送邮件到1417201844@qq.com.
 		</p>
-		<p>p211012479 岑顺权</p>
+		<p class="n">p211012479岑顺权
+		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				href="https://www.xbmu.edu.cn/"
+				title="西北民族大学"
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				href="https://dxs.moe.gov.cn/zx/a/xyh_xyh_xbmzdx/240329/1881365.shtml"
+				title="春天"
+				body="冬去春来，民大春意盎然."
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
+				href="https://dxs.moe.gov.cn/zx/a/xyh_xyh_xbmzdx/240514/1885254.shtml"
+				title="夏天"
+				body="民大夏日，生机勃勃."
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+				href="https://www.xbmu.edu.cn/info/1441/35781.htm"
+				title="冬天"
+				body="冬日已至，天冷人心暖. ❤️"
 			/>
 		</ul>
 	</main>
@@ -128,4 +137,8 @@ import HeaderNavigation from "../components/Nav.astro";
 		gap: 2rem;
 		padding: 0;
 	}
+	.n{
+		color: #461d7e;
+	}
+
 </style>

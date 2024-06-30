@@ -37,66 +37,96 @@ import HeaderNavigation from "../components/Nav.astro";
         <HeaderNavigation />
         <h1 class="text-gradient">关于我</h1>
     </main>
+    <p class="instructions">
+        交流新闻学专业课的内容、大学生活安排以及考研事宜.<br
+        />
+        <strong>有问必答:</strong> 欢迎收藏并关注我们的网站，我们将不定期的更新，有想要咨询的内容请发送邮件到1417201844@qq.com.
+    </p>
+    <p class="container">
+
+    </p>
 </Layout>
 
 <style>
-    main {
-        margin: auto;
-        padding: 1rem;
-        width: 800px;
-        max-width: calc(100% - 2rem);
-        color: white;
-        font-size: 20px;
-        line-height: 1.6;
-    }
-    .astro-a {
-        position: absolute;
-        top: -32px;
-        left: 50%;
-        transform: translatex(-50%);
-        width: 220px;
-        height: auto;
-        z-index: -1;
-    }
-    h1 {
-        font-size: 4rem;
-        font-weight: 700;
-        line-height: 1;
-        text-align: center;
-        margin-bottom: 1em;
-    }
-    .text-gradient {
-        background-image: var(--accent-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 400%;
-        background-position: 0%;
-    }
-    .instructions {
-        margin-bottom: 2rem;
-        border: 1px solid rgba(var(--accent-light), 25%);
-        background: linear-gradient(
-            rgba(var(--accent-dark), 66%),
-            rgba(var(--accent-dark), 33%)
-        );
-        padding: 1.5rem;
-        border-radius: 8px;
-    }
-    .instructions code {
-        font-size: 0.8em;
-        font-weight: bold;
-        background: rgba(var(--accent-light), 12%);
-        color: rgb(var(--accent-light));
-        border-radius: 4px;
-        padding: 0.3em 0.4em;
-    }
-    .instructions strong {
-        color: rgb(var(--accent-light));
-    }
-    .link-card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-        gap: 2rem;
-        padding: 0;
-    }
+   body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        .astro-a {
+            position: absolute;
+            top: 20px; /* Adjusted to give some space from the top */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px; /* Increased size for better visibility */
+            height: auto;
+            z-index: -1;
+        }
+        main {
+            display: flex-direction:table-row;
+            flex-direction: column;
+            align-items: center;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1.text-gradient {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: -webkit-linear-gradient(45deg, #6a11cb, #2575fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 5s infinite alternate;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0%; }
+            100% { background-position: 100%; }
+        }
+        p.instructions {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-left: 4px solid #007bff;
+            border-radius: 8px;
+            text-align: center;
+        }
+        p.instructions strong {
+            color: #007bff;
+        }
+        p.instructions a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        p.instructions a:hover {
+            text-decoration: underline;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .astro-a {
+                width: 200px;
+            }
+            h1.text-gradient {
+                font-size: 2rem;
+            }
+            p.instructions {
+                margin-top: 20px;
+            }
+        }
+        .container {
+    display: flex;          
+    flex-direction: column; 
+    align-items: center;   
+    max-width: 900px;      
+    margin: 40px auto;     
+    padding: 20px;          
+    background-color: #fff;
+    border-radius: 10px;   
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* 阴影效果 */
+}
 </style>
