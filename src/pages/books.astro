@@ -4,7 +4,7 @@ import Card from "../components/Card.astro";
 import HeaderNavigation from "../components/Nav.astro";
 ---
 
-
+<img src="https://pic1.zhimg.com/v2-754020cddb7334647e100559fff64d76_1440w.jpg?source=172ae18b" alt="背景图" class="centered-image">
 <Layout title="Welcome to Astro.">
 	<main>
 		<svg
@@ -42,8 +42,8 @@ import HeaderNavigation from "../components/Nav.astro";
 				:root {
 					--accent-color: #007bff;
 					--accent-gradient: linear-gradient(to right, #4facfe, #00f2fe);
-					--accent-light: 255, 255, 255; /* 例如白色 */
-					--accent-dark: 0, 123, 255; /* 例如深蓝色 */
+					--accent-light: 255, 255, 255;
+					--accent-dark: 0, 123, 255; 
 				}
 			</style>
 		</head>
@@ -78,6 +78,23 @@ import HeaderNavigation from "../components/Nav.astro";
 	</main>
 </Layout>
 
+<style>
+	.centered-image {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+
+	  border: 5px solid #eff6f6ec; 
+	  padding: 10px;
+  
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+	  transition: transform 0.3s ease;
+	}
+  
+	.centered-image:hover {
+	  transform: scale(1.05);
+	}
+  </style>
 <style>
 	main {
 		margin: auto;
